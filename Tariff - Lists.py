@@ -28,13 +28,12 @@ def validation_and_execute():
             print("You entered a zero, please enter a valid positive number!")
         else:
             print("You entered a negative number, please enter a positive number")
-
     except ValueError:
         print("You need to input a value")
 
 
 user_input = ""
 while user_input != "exit":
-    user_input = input("Hello, Capture readings and they will be converted to the Com Bill Amount, VAT Inclusive!\n")
-    for num_of_units_elements in user_input:  # change the parameter for function named "validation_and_execute"
+    user_input = input("Hello, Capture readings in CSV form and they will be converted to Com Bill Amount, VAT Incl!\n")
+    for num_of_units_elements in user_input.split(","):  # split is used for the comma separated values in lists
         validation_and_execute()
