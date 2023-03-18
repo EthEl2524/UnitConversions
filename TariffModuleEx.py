@@ -29,6 +29,3 @@ def validation_and_execute(units_and_currency_conversion):
             print("You entered a negative number, please enter a positive number")
     except ValueError:
         print("You need to input a value")
-
-
-user_message = "Hello"
